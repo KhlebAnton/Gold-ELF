@@ -1,0 +1,90 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
+    <title>Gold-ELF</title>
+    <link rel="stylesheet" href="style.css?ver=1">
+</head>
+
+<body>
+    
+    
+    <div class="screen screen-preloader ">
+        <div class="logo"></div>
+        <div class="loader">
+            <div class="loader-title">
+                <span>Загрузка приложения <span id="loader-precent">0</span>%</span>
+            </div>
+            <div class="loader-bar">
+                <div class="loader-bar-progress" style="width: 0%;">
+
+                </div>
+            </div>
+        </div>
+        <div class="btns-start">
+            <div class="btn_primary" ontouchstart onclick=" openLinkGoldApple()">
+                На сайт GoldAppleBox Advent
+            </div>
+            <div class="btn_primary" ontouchstart onclick="showGame(), hidePreloader()">
+                Запустить AR-приключение
+            </div>
+        </div>
+    </div>
+    
+    <div class="screen screen-game hidden">
+
+        <div class="game game-box">
+            
+            <div class="btn-test-wrap">
+                <button class="btn_test" onclick="hideGameBox(),showGameShot()">Поймал</button>
+                <button class="btn_test" onclick="setBoxImg(1)">box1</button>
+                <button class="btn_test" onclick="setBoxImg(2)">box2</button>
+                <button class="btn_test" onclick="setBoxImg(3)">box3</button>
+                <button class="btn_test" onclick="setBoxImg(4)">box4</button>
+            </div>
+            
+            <div class="game-header">
+                <div class="btn_game-close" ontouchstart onclick="showPreloader(),hideGame() ">
+                    <svg width="16" height="16" viewBox="0 0 16 16" fill="none" xmlns="http://www.w3.org/2000/svg">
+                        <path d="M14 2L2 14M14 14L2 2" stroke="#CDDE00" stroke-opacity="0.5" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"/>
+                    </svg>  
+                </div>
+                     
+            </div>
+            <!-- box-1, box-2, box-3, box-4 -->
+            <div class="box-image" data-img="2"></div>
+            <div class="game-footer">
+                <div class="game-info">
+                    Наведи камеру на свой адвент-бокс
+                </div>
+            </div>
+        </div>
+        <div class="game camera-shot hidden">
+            <div class="btn-camera" ontouchstart onclick="showScreenShot()"></div>
+        </div>
+
+        <div class="screenshot-container hidden">
+            <div class="wrapper screenshot-block">
+                <div class="block">
+                    <div class="screenshot-img" style="background-image: url('./test.png');"></div>
+                    
+                    <div class="btn_primary" ontouchstart onclick="hideScreenShot()">
+                        переснять
+                    </div>
+                    <div class="btn_primary" ontouchstart
+                        onclick="">
+                        поделиться
+                    </div>
+                </div>
+                <div class="btn-game close" onclick="hideScreenShot()"></div>
+            </div>
+        </div>
+
+    </div>
+
+    <script src="./script.js?ver=1"></script>
+</body>
+
+</html>
