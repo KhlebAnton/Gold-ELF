@@ -8,6 +8,7 @@ document.addEventListener("DOMContentLoaded", () => {
 const scrGame = document.querySelector('.screen-game');
 function showGame() {
     scrGame.classList.remove('hidden');
+    scrGame.setAttribute('style', 'background: #000000a9;');
 }
 function hideGame() {
     scrGame.classList.add('hidden');
@@ -20,6 +21,7 @@ function showPreloader() {
 }
 function hidePreloader() {
     preloader.classList.add('hidden');
+    
 }
 
 ///progress bar 
@@ -40,7 +42,6 @@ function startLoad() {
         } else {
             setProgress(100);
             preloader.classList.add('start-menu')
-        
         }
         
     },100)
@@ -49,10 +50,12 @@ function startLoad() {
 //game screen with box 
 const gameBox = document.querySelector('.game-box');
 function showGameBox() {
-    gameBox.classList.remove('hidden')
+    gameBox.classList.remove('hidden');
+    
 }
 function hideGameBox() {
     gameBox.classList.add('hidden');
+    scrGame.setAttribute('style', '');
 }
 //game screen with box 
 const gameShot = document.querySelector('.camera-shot');
