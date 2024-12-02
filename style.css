@@ -281,7 +281,7 @@ color: #374D65;
     text-transform: uppercase;
 }
 .anim_background {
-    position: absolute;
+    position: fixed;
     top: 0;
     left: 0;
     width: 100%;
@@ -296,7 +296,7 @@ color: #374D65;
     pointer-events: none;
 }
 .video-comp {
-    position: absolute;
+    position: fixed;
     z-index: 10;
     top: 50%; 
   left: 50%;
@@ -315,7 +315,7 @@ color: #374D65;
     z-index: -10;
 }
 .video-anim {
-    position: absolute;
+    position: fixed;
     width: 100%;
     height: 100%;
     top: 0;
