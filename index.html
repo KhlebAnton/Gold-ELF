@@ -9,7 +9,10 @@
 </head>
 
 <body>
-    
+    <div id="bgAnim" class="anim_background hidden">
+        <video playsinline  id="video-anim" class="video-anim" src="./background.mp4"></video>
+    </div>
+    <video playsinline  id="video-comp" class="video-comp" type="video/webm" src="./Comp.webm"></video>
     
     <div class="screen screen-preloader ">
         <div class="logo"></div>
@@ -43,6 +46,7 @@
                 <button class="btn_test" onclick="setBoxImg(2)">box2</button>
                 <button class="btn_test" onclick="setBoxImg(3)">box3</button>
                 <button class="btn_test" onclick="setBoxImg(4)">box4</button>
+                <button class="btn_test" onclick="playAnimation()">анимация</button>
             </div>
             
             <div class="game-header">
