@@ -325,7 +325,7 @@ color: #374D65;
     object-fit: cover;
     opacity: 0;
     transition: 1s;
-    pointer-events: none;
+    /* pointer-events: none; */
 }
 .video-bg.anim {
     opacity: 1;
