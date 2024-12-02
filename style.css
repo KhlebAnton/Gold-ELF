@@ -365,7 +365,7 @@ color: #374D65;
    animation: animText 5s infinite ease-in-out;
    opacity: 1;
     transform: scale(1.2);
-    transition: .3s;
+    transition: .5s;
    
 }
 .text-anim.hidden {
