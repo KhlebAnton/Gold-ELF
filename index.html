@@ -12,7 +12,10 @@
     <div id="bgAnim" class="anim_background hidden">
         
     </div>
-    <video playsinline  id="video-comp" class="video-comp" src="./v2.mov"></video>
+    <video playsinline preload id="video-comp" class="video-comp">
+        <source src="./v2.mov" type="video/mp4">
+        <source src="./Comp.webm" type="video/webm" />
+    </video>
     <div class="screen screen-preloader ">
         <div class="logo"></div>
         <div class="loader">
