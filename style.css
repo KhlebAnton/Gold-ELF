@@ -290,6 +290,9 @@ color: #374D65;
     background: #afc5c9;
     transition: all 3s;
     opacity: 1;
+    display: flex;
+    justify-content: center;
+    align-items: center;
 }
 .anim_background.anim {
     background: #CDDE00;
@@ -319,24 +322,94 @@ color: #374D65;
   transition: opacity 2s, transform 5s;
   background: none;
 }
-.video-bg {
-    position: absolute;
-    top: 0;
-    left: 0;
-    width: 100%;
-    height: 100%;
-    /* object-fit: cover; */
-    opacity: 0;
-    transition: 1s;
-    /* pointer-events: none; */
-}
-.video-bg.anim {
-    opacity: 1;
-}
+
 .canvas-camp.anim {
     transform: scale(2);
 }
 .canvas-camp.hidden {
     opacity: 0;
     
+}
+.bg-stars {
+    position: fixed;
+    z-index: -1;
+    top: 0;
+    bottom: 0;
+    right: 0;
+    left: 0;
+    background: url('./img/Stars.png') 50% / cover no-repeat;
+    
+    transform: scale(1.2);
+    opacity: 0;
+}
+.bg-stars.anim {
+    animation: animStars 5s infinite ease;
+}
+.text-anim {
+   font-weight: 900;
+   font-size: 50px;
+   background-image: linear-gradient(
+	to right,
+	#bcbe27 0,
+       	#fcac35 22%, 
+	#f6e27a 45%,
+	#f6f2c0 50%,
+	#f6e27a 55%,
+	#eb9c26 78%,
+	#8e9709 100%
+	);
+    background-size: 600px ;
+    background-position:-200px;
+   color:transparent;
+   -webkit-background-clip:text;
+   animation: animText 5s infinite ease-in-out;
+   opacity: 1;
+    transform: scale(1.2);
+    transition: .3s;
+   
+}
+.text-anim.hidden {
+    opacity: 0;
+    transform: scale(0);
+}
+@keyframes animText {
+    0%{
+        background-position:0px;
+        transform: scale(1.2) rotate(-5deg);
+    }
+    10% {
+        
+    }
+    50% {
+        background-position:-200px;
+        transform: scale(0.95) rotate(5deg);
+    }
+    90% {
+        
+    }
+    100% {
+        background-position:0px;
+        transform: scale(1.2) rotate(-5deg);
+    }
+}
+@keyframes animStars {
+    0% {
+        opacity: 0;
+        transform: scale(3);
+    }
+    20% {
+        opacity: 1;
+        transform: scale(1);
+    }
+    30% {
+        opacity: 1;
+        transform: scale(1.1) translateY(-10px);
+    }
+    90% {
+        opacity: 1;
+    }
+    100% {
+        opacity: 0;
+        transform: translateY(0px);
+    }
 }

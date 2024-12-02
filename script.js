@@ -100,6 +100,8 @@ function openLinkGoldApple() {
 ///animation
 const videoBg = document.querySelector('.video-bg');
 const bgAnim = document.getElementById('bgAnim') ;
+const bgStars = document.querySelector('.bg-stars');
+const bgText = document.querySelector('.text-anim')
 function playAnimation() {
     animate();
     setTimeout(()=>{
@@ -108,9 +110,9 @@ function playAnimation() {
         setTimeout(()=> {
             canvas.classList.add('hidden');
             bgAnim.classList.add('anim');
-            videoBg.classList.add('anim')
             setTimeout(() => {
-                videoBg.play()
+                bgStars.classList.add('anim');
+                bgText.classList.remove('hidden')
             }, 1000);
         },2000)
     }, 4000)
