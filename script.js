@@ -98,12 +98,16 @@ function openLinkGoldApple() {
 }
 
 ///animation
+
+
+
 const videoBg = document.querySelector('.video-bg');
 const bgAnim = document.getElementById('bgAnim') ;
 const bgStars = document.querySelector('.bg-stars');
 const bgText = document.querySelector('.text-anim')
 function playAnimation() {
-    animate();
+    startNewAnimation()
+    
     setTimeout(()=>{
         bgAnim.classList.remove('hidden');
         setTimeout(()=> {canvas.classList.add('anim')},1000)
@@ -118,7 +122,15 @@ function playAnimation() {
     }, 4000)
     
 }
-
+function closeAnimation() {
+    bgStars.classList.remove('anim');
+    bgText.classList.add('hidden');
+    canvas.classList.remove('hidden');
+    bgAnim.classList.remove('anim');
+    bgAnim.classList.add('hidden');
+    clearSnowflakes()
+    // snowflakes.length= 0;
+}
 
 
 const canvas = document.getElementById('snow');
@@ -237,7 +249,25 @@ function animate() {
     });
 
     requestAnimationFrame(animate);
-    setTimeout(() => {
+
+    // Проверяем условие для остановки анимации
+    if (isMoving && Date.now() - startTime >= 6000) {
         isMoving = false;
-    }, 6000);
+    }
+}
+
+let startTime;
+
+function startNewAnimation() {
+    clearSnowflakes();
+    isMoving = true;
+    startTime = Date.now(); // Сохраняем текущее время начала анимации
+    animate();
+}
+// Очистка массива snowflakes перед новой анимацией
+function clearSnowflakes() {
+    snowflakes.length = 0;
+    for (let i = 0; i < 3000; i++) {
+        snowflakes.push(new Snowflake());
+    }  
 }
