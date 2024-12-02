@@ -322,7 +322,7 @@ color: #374D65;
 .video-bg {
     width: 100%;
     height: 100%;
-    object-fit: cover;
+    /* object-fit: cover; */
     opacity: 0;
     transition: 1s;
     /* pointer-events: none; */
