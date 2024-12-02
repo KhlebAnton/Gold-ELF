@@ -98,14 +98,14 @@ function openLinkGoldApple() {
 }
 
 ///animation
-const vidComp = document.getElementById('video-comp');
-const bgAnim = document.getElementById('bgAnim') ;
-const vidAnim = document.getElementById('video-anim')
-function playAnimation() {
-    vidComp.play();
-    setTimeout(()=>{
-        bgAnim.classList.remove('hidden');
-        setTimeout(()=>vidAnim.play(),1000)
-    }, 4000)
-    setTimeout(()=>vidComp.classList.add('hidden'), 5000)
-}
+// const vidComp = document.getElementById('video-comp');
+// const bgAnim = document.getElementById('bgAnim') ;
+// const vidAnim = document.getElementById('video-anim')
+// function playAnimation() {
+//     vidComp.play();
+//     setTimeout(()=>{
+//         bgAnim.classList.remove('hidden');
+//         setTimeout(()=>vidAnim.play(),1000)
+//     }, 4000)
+//     setTimeout(()=>vidComp.classList.add('hidden'), 5000)
+// }
