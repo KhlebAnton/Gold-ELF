@@ -99,15 +99,18 @@ function openLinkGoldApple() {
 
 ///animation
 const bgVideo = document.querySelector('.video_bg');
-
+const bgVideoScr = document.querySelector('.video-screen');
 function showVideo() {
-    bgVideo.classList.add('open');
+    bgVideoScr.classList.add('open');
     bgVideo.play();
 }
 
 function closeVideo() {
-    bgVideo.classList.remove('open');
+    bgVideoScr.classList.remove('open');
 }
+bgVideo.addEventListener('ended', ()=> {
+    closeVideo();
+})
 
 
 // const videoBg = document.querySelector('.video-bg');
