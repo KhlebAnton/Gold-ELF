@@ -9,11 +9,15 @@
 </head>
 
 <body>
-    <div id="bgAnim" class="anim_background hidden">
+    <!-- <div id="bgAnim" class="anim_background hidden">
         <div class="bg-stars"></div>
         <div class="text-anim hidden">Загаданное сбудется, <br> <br>обещаем!</div>
-    </div>
-   <canvas id="snow" class="canvas-camp"></canvas>
+    </div> -->
+   <!-- <canvas id="snow" class="canvas-camp"></canvas> -->
+    <video  class="video_bg" preload="auto" playsinline>
+        <source src="./background-lime-stars.mp4" type="video/mp4">
+        Your browser does not support the video tag.
+      </video>
     <div class="screen screen-preloader ">
         <div class="logo"></div>
         <div class="loader">
@@ -46,7 +50,7 @@
                 <button class="btn_test" onclick="setBoxImg(2)">box2</button>
                 <button class="btn_test" onclick="setBoxImg(3)">box3</button>
                 <button class="btn_test" onclick="setBoxImg(4)">box4</button>
-                <button class="btn_test" onclick="playAnimation()">анимация</button>
+                <button class="btn_test" onclick="showVideo()">анимация</button>
             </div>
             
             <div class="game-header">
