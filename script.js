@@ -102,9 +102,7 @@ const bgVideo = document.querySelector('.video_bg');
 
 function showVideo() {
     bgVideo.classList.add('open');
-    setTimeout(() => {
-        bgVideo.play();
-    }, 500);
+    bgVideo.play();
 }
 
 function closeVideo() {
