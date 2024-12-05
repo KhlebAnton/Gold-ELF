@@ -425,7 +425,9 @@ color: #374D65;
     object-fit: cover;
     pointer-events: none;
     opacity: 0;
-    transition: .5s;
+    -moz-transition: all .5s ;
+    -webkit-transition: all .5s;
+    transition: all .5s;
  }
  .video_bg.open {
     opacity: 1;
